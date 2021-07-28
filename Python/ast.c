@@ -4451,6 +4451,8 @@ ast_for_stmt(struct compiling *c, const node *n)
                 return ast_for_if_stmt(c, ch);
             case while_stmt:
                 return ast_for_while_stmt(c, ch);
+            case until_stmt:
+                return ast_for_until_stmt(c, ch);
             case for_stmt:
                 return ast_for_for_stmt(c, ch, 0);
             case try_stmt:
