@@ -1582,6 +1582,8 @@ find_ann(asdl_seq *stmts)
             res = find_ann(st->v.While.body) ||
                   find_ann(st->v.While.orelse);
             break;
+        case Until_kind:
+                return compiler_until(c, s);
         case If_kind:
             res = find_ann(st->v.If.body) ||
                   find_ann(st->v.If.orelse);
